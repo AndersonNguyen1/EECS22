@@ -1,0 +1,3 @@
+Anderson Nguyen
+
+This was the hardest lab by far. I was able to implement the core functions of the lab but could not make the DIPs work properly. The Makefile compiles but I could not get the movie to play because it is not detecting any frames. 

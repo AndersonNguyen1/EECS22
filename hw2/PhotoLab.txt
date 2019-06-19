@@ -1,0 +1,10 @@
+Anderson Nguyen
+
+This PhotoLab project allows the user to upload images and apply various filters
+to them. When approaching each challenge, I used for loops to process the 2d
+arrays of pixels and used logical and mathimatical reasoning to transform the
+pixels to the desired filter. I used nested loops to process 2d matrices because
+it is efficient and clear. Although each function began in a similar fashion,
+they varied in their approach to solve the problem and challenged me to think
+critically.   
+

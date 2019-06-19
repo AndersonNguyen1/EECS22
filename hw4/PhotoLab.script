@@ -1,0 +1,197 @@
+Script started on Wed 22 Nov 2017 04:20:54 PM PST
+]0;andersvn@laguna:~/hw4[andersvn@laguna ~/hw4]$ make
+gcc -ansi -Wall -c PhotoLab.c -o PhotoLab.o
+gcc -ansi -Wall -c FileIO.c -o FileIO.o
+gcc -ansi -Wall -c  DIPs.c -o DIPs.o
+gcc -ansi -Wall -c Advanced.c -o Advanced.o
+gcc -ansi -Wall -c Image.c -o Image.o
+ar rc libFilter.a Advanced.o DIPs.o Image.o
+ranlib libFilter.a
+gcc -ansi -Wall PhotoLab.o FileIO.o -L. -lFilter -o PhotoLab
+gcc -ansi -Wall -c -DDEBUG -c PhotoLab.c -o PhotoLab_DEBUG.o
+gcc -ansi -Wall -c Test.c -o Test.o
+gcc  PhotoLab_DEBUG.o FileIO.o -L. -lFilter -o PhotoLabTest
+]0;andersvn@laguna:~/hw4[andersvn@laguna ~/hw4]$ ./PhotoLab
+
+----------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Make a negative of an image
+ 5: Color filter an image
+ 6: Sketch the edge of an image
+ 7: Shuffle an image
+ 8: Flip an image vertically
+ 9: Mirror an image vertically
+10: Add border to an image
+11: Add Noise to an image
+12: Sharpen the image
+13: Posterize the image
+14: Blur the image
+15: Crop an image
+16: Resize an image
+17: Adjust the Brightness and Contrast of an image
+18: Add Watermark to an image
+19: Test all functions
+20: Exit
+Please make your choice: 19
+Black & White tested!
+
+Negative tested!
+
+Color Filter tested!
+
+Edge Detection tested!
+
+VMirror tested!
+
+VFlip tested!
+
+Shuffle tested!
+
+Border tested!
+
+Noise tested!
+
+Sharpen tested!
+
+Posterize tested!
+
+MotionBlur tested!
+
+Crop tested!
+
+BrightnessAndContrast tested!
+
+Smallresize tested!
+
+Bigresize tested!
+
+Watermark tested!
+
+AutoTest finished successfully
+----------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Make a negative of an image
+ 5: Color filter an image
+ 6: Sketch the edge of an image
+ 7: Shuffle an image
+ 8: Flip an image vertically
+ 9: Mirror an image vertically
+10: Add border to an image
+11: Add Noise to an image
+12: Sharpen the image
+13: Posterize the image
+14: Blur the image
+15: Crop an image
+16: Resize an image
+17: Adjust the Brightness and Contrast of an image
+18: Add Watermark to an image
+19: Test all functions
+20: Exit
+Please make your choice: 20
+You exit the program.
+]0;andersvn@laguna:~/hw4[andersvn@laguna ~/hw4]$ valgrind --leak-cle[K[K[Kh[Kcheck=full ./PhotoLabTest
+==170540== Memcheck, a memory error detector
+==170540== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==170540== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==170540== Command: ./PhotoLabTest
+==170540== 
+
+----------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Make a negative of an image
+ 5: Color filter an image
+ 6: Sketch the edge of an image
+ 7: Shuffle an image
+ 8: Flip an image vertically
+ 9: Mirror an image vertically
+10: Add border to an image
+11: Add Noise to an image
+12: Sharpen the image
+13: Posterize the image
+14: Blur the image
+15: Crop an image
+16: Resize an image
+17: Adjust the Brightness and Contrast of an image
+18: Add Watermark to an image
+19: Test all functions
+20: Exit
+Please make your choice: 19
+Black & White tested!
+
+Negative tested!
+
+Color Filter tested!
+
+Edge Detection tested!
+
+VMirror tested!
+
+VFlip tested!
+
+Shuffle tested!
+
+Border tested!
+
+Noise tested!
+
+Sharpen tested!
+
+Posterize tested!
+
+MotionBlur tested!
+
+Crop tested!
+
+BrightnessAndContrast tested!
+
+Smallresize tested!
+
+Bigresize tested!
+
+Watermark tested!
+
+AutoTest finished successfully
+----------------------------
+ 1: Load a PPM image
+ 2: Save an image in PPM and JPEG format
+ 3: Change a color image to Black & White
+ 4: Make a negative of an image
+ 5: Color filter an image
+ 6: Sketch the edge of an image
+ 7: Shuffle an image
+ 8: Flip an image vertically
+ 9: Mirror an image vertically
+10: Add border to an image
+11: Add Noise to an image
+12: Sharpen the image
+13: Posterize the image
+14: Blur the image
+15: Crop an image
+16: Resize an image
+17: Adjust the Brightness and Contrast of an image
+18: Add Watermark to an image
+19: Test all functions
+20: Exit
+Please make your choice: make clean          20
+You exit the program.
+==170540== 
+==170540== HEAP SUMMARY:
+==170540==     in use at exit: 0 bytes in 0 blocks
+==170540==   total heap usage: 127 allocs, 127 frees, 26,043,939 bytes allocated
+==170540== 
+==170540== All heap blocks were freed -- no leaks are possible
+==170540== 
+==170540== For counts of detected and suppressed errors, rerun with: -v
+==170540== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+]0;andersvn@laguna:~/hw4[andersvn@laguna ~/hw4]$ make clean
+rm -f *.o *.jpg PhotoLab PhotoLabTest bw.ppm negative.ppm colorfilter.ppm edge.ppm vflipflip.ppm shuffle.ppm vmirror.ppm border.ppm noise.ppm sharpen.ppm posterize.ppm blur.ppm libFilter.a libFileIO.a
+]0;andersvn@laguna:~/hw4[andersvn@laguna ~/hw4]$ exit
+exit
+
+Script done on Wed 22 Nov 2017 04:23:01 PM PST

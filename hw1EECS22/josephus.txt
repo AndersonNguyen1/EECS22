@@ -1,0 +1,17 @@
+Anderson Nguyen
+Josephus Problem Explanation
+
+My approach to this assignment was to make 2 arrays. One kept track of points of each
+executioner and the other one kept track of who was alive. I looped through the array
+of who was alive and for each person that was alive, I would find out who they needed
+to kill next. When a person dies, I changed their status to dead and grant the other 
+player a point. It loops until there is only 1 person alive. 
+
+I used modulo in order to cycle the array. For example if 5 was the max # of people:
+1%5 = 1 and 6%5 = 1 
+
+we can see that any value greater than 5 will be mapped to a specific value under 5
+so we won't go out of bounds of the array. This essentially links the end of the
+array to the beginning of the array. 
+
+Once that it all done, we have a complete program!

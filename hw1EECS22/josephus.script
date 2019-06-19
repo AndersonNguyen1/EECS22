@@ -1,0 +1,8 @@
+Script started on Mon 09 Oct 2017 08:12:25 PM PDT
+]0;andersvn@bondi:~/hw1[andersvn@bondi ~/hw1]$ ./josephus
+How many people are in the circle? 5
+The spot 3 is safe.
+Most executions by an individual are 2
+]0;andersvn@bondi:~/hw1[andersvn@bondi ~/hw1]$ ^Dexit
+
+Script done on Mon 09 Oct 2017 08:13:07 PM PDT
